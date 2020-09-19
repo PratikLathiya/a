@@ -54,27 +54,76 @@
 	@endif
 <section>
 	<div>
-		<img src="{{asset('assets/images/services/15998297072.jpg')}}" alt="">
-		<div class="row" style="margin-top:-168px ;opacity:1;font-family: Josefin Sans" >
-			<div  style="width: 18rem;text-align: center ; margin-left:302px">
-				<div class="" style="opacity: 1">
+		<img src="{{asset('assets/images/services/15998297072.jpg')}}" alt="" id="servi">
+		<div class="row" style="margin-top:-168px ;opacity:1;font-family: Josefin Sans" id="servitext" >
+			<div class="handmade1" style="width: 18rem;text-align: center ; margin-left:302px">
+				<div class="handmade" style="opacity: 1">
 				  <b class="card-title">HAND MADE</b>
-				  <hr style="border:1px solid white;width:15%">
-				  <p class="card-text" style="color:rgb(243, 236, 236)">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <hr class="servihr">
+				  <p class="card-text extra_content" id="extra_content" style="color:rgb(243, 236, 236)">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <center><button id="read_more" class="read_more btn btn-outline-light" data-toggle="modal" data-target="#myModal">Details</button></center>
+				  <div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+					
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+						  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					  </div>
+					  
+					</div>
+				  </div>
 				</div>
+				
 			</div>
-			<div  style="width: 18rem;text-align: center;margin-left:128px">
-				<div class="" style="opacity: 1">
+			<div  style="width: 18rem;text-align: center;" id="servitext1">
+				<div class="nature" style="opacity: 1">
 				  <b class="card-title">100 % NATURE</b>
-				  <hr style="border:1px solid white;width:15%">
-				  <p class="card-text" style="color: rgb(243, 236, 236)">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <hr class="servihr">
+				  <p class="card-text extra_content" id="extra_content" style="color: rgb(243, 236, 236)">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <center><button id="read_more" class="read_more btn btn-outline-light" data-toggle="modal" data-target="#myModal">Details</button></center>
+				  <div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+					
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+						  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					  </div>
+					  
+					</div>
+				  </div>
 				</div>
 			</div>
-			<div  style="width: 18rem;text-align: center;margin-left:110px">
-				<div class="" style="opacity: 1">
+			<div  style="width: 18rem;text-align: center;" id="servitext2">
+				<div class="cruelty" style="opacity: 1">
 				  <b class="card-title">CRUELTY FREE</b>
-				  <hr style="border:1px solid white;width:15%">
-				  <p class="card-text" style="color: rgb(243, 236, 236)">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <hr class="servihr">
+				  <p class="card-text extra_content" id="extra_content" style="color: rgb(243, 236, 236)">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				  <center><button id="read_more" class="read_more btn btn-outline-light" data-toggle="modal" data-target="#myModal">Details</button></center>
+				  <div class="modal fade" id="myModal" role="dialog">
+					<div class="modal-dialog">
+					
+					  <!-- Modal content-->
+					  <div class="modal-content">
+						<div class="modal-header">
+						  <button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+						  <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						</div>
+					  </div>
+					  
+					</div>
+				  </div>
 				</div>
 			</div>
 		</div>
@@ -85,7 +134,7 @@
 	@if($ps->featured == 1)
 		<!-- Trending Item Area Start -->
 		<section  class="trending">
-			<div class="container">
+			<div class="container" style="font-family: Josefin Sans">
 				<div class="row">
 					<div class="col-lg-12 remove-padding">
 						<div class="section-top">
@@ -124,7 +173,7 @@
 								<div class="left">
 									<a class="banner-effect" href="{{ $img->link }}" target="_blank">
 										<img src="{{asset('assets/images/banners/'.$img->photo)}}" alt=""> 
-										Hello
+										
 									</a>
 								</div>
 							</div>

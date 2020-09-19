@@ -88,6 +88,44 @@ input[type=text], select, textarea {
   resize: vertical;
 }
 
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 	</style>
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -95,8 +133,38 @@ input[type=text], select, textarea {
 	 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 	 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	 <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+// Get the modal
+var modal = document.getElementById("PopModal");
+        // Get the button that opens the modal
+        var btn = document.getElementById("PopBtn");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        // When the user clicks anywhere outside of the modal, close it
+        
+        window.onclick = function(event) {
+        
+          if (event.target == modal) {
+        
+            modal.style.display = "none";
+        
+          }
+        
+        }
+	</script>
 </head>
 
 <body>
@@ -227,21 +295,21 @@ input[type=text], select, textarea {
 		
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<div class="navbar-nav">
-						<a href="#" class="nav-item nav-link active">HOME</a>
+						<a href="{{route('front.index')}}" class="nav-item nav-link active">HOME</a>
 						<a href="#" class="nav-item nav-link">FEATURE</a>
 						<a href="#" class="nav-item nav-link">SHOP</a>
 						<a href="#" class="nav-item nav-link">ABOUT US</a>
 						<a href="#" class="nav-item nav-link">WHERE TO BUY?</a>
 						<div class="search-box-wrapper" style="padding-left: 60px">
 							<div class="search-box">
-								<form id="searchForm" class="search-form" action="{{ route('front.category', [Request::route('category'),Request::route('subcategory'),Request::route('childcategory')]) }}" method="GET">
-									<input type="text" id="prod_name" name="search" placeholder="{{ $langg->lang2 }}" value="{{ request()->input('search') }}" autocomplete="off">
+								<form id="searchForm" class="search-form form-inline d-flex  md-form " action="{{ route('front.category', [Request::route('category'),Request::route('subcategory'),Request::route('childcategory')]) }}" method="GET">
+									<i class="fas fa-search" aria-hidden="true"></i>
+  									<input class="form-control form-control-sm ml-3 " type="text" placeholder="Search" aria-label="Search" id="prod_name" name="search" placeholder="{{ $langg->lang2 }}" value="{{ request()->input('search') }}" autocomplete="off">
 									<div class="autocomplete">
 									  <div id="myInputautocomplete-list" class="autocomplete-items">
 									  </div>
 									</div>
-									{{-- <button type="submit"><i class="icofont-search-1"></i></button> --}}
-							  </form>
+							  	</form>
 							</div>
 						</div>
 					</div>
@@ -276,8 +344,8 @@ input[type=text], select, textarea {
 						<div class="content">
 							<div class="content" style="text-align: left">
 								<p>{!! $gs->copyright !!}
-                                    <a href="{{ App\Models\Socialsetting::find(1)->facebook }}" class="facebook" target="_blank">
-                                        <i class="fab fa-facebook-f" style="margin-left: 350px;"></i>
+                                    <a id="footerface" href="{{ App\Models\Socialsetting::find(1)->facebook }}" class="facebook" target="_blank">
+                                        <i class="fab fa-facebook-f" style="margin-left: 350px;" ></i>
                                     </a>
 
                                     <a href="{{ App\Models\Socialsetting::find(1)->gplus }}" class="google-plus" target="_blank">

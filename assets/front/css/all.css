@@ -5213,6 +5213,137 @@ body {
 .topnav .search-container button:hover {
   background: #ccc;
 }
+#servitext1{
+  margin-left:135px;
+}
+#servitext2{
+  margin-left:100px;
+}
+.navbar{
+  margin-bottom:20px;
+}
+
+@media screen and (max-width: 600px)
+{
+  .navbar{
+    margin-bottom:0px;
+  }
+  #footerface{
+    margin-left: -200px;
+  }
+
+  #blogcard{
+    padding: 68px;
+  }
+
+  #featured{
+    height: 155px;
+    width: 72px;
+    margin-left: 66px;
+  }
+  #servi {
+    height:145px;
+  }
+
+  .extra_content {
+      display: none;
+    }
+
+  #read_more {
+      display: block;
+    }
+
+  #servitext{
+    margin-top:-72px;
+  }
+#servitext1{
+  margin-top:-47px;
+  margin-left:150px;
+}
+.nature{
+  font-size: 8px;
+  margin-top:6px;
+}
+.nature .servihr{
+  width: 5px;
+  border:1px solid white;
+}
+.nature hr{
+  width:5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+#servitext2{
+  margin-left:244px;
+  margin-top: -48px;
+}
+.cruelty{
+  font-size: 8px;
+  margin-top:6px;
+}
+.cruelty .servihr{
+  width: 5px;
+  border:1px solid white;
+}
+.cruelty hr{
+  width:5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+    .handmade1{
+      margin-left:47px;
+    }
+.handmade{
+  margin-left:-500px;
+  margin-top: 105px;
+  font-size:8px;
+}
+
+.handmade .servihr{
+  width: 5px;
+  border:1px solid white;
+}
+
+    .handmade hr{
+      width:5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+#read_more{
+  border: 1px solid #fdfcfc;
+  padding: 0px;
+  height: 19px;
+  font-size: 8px;
+  width: 35px;
+}
+.read_more  {
+  
+      pointer-events: visible;
+}
+
+
+
+}
+
+#featured{
+  height: 200px;
+  width:100px; 
+  margin-left:90px
+}
+
+  .servihr{
+    width: 15%;
+    border:1px solid white;
+  }
+  
+
+
+  /* .read_more  {
+    cursor: not-allowed;
+        pointer-events: none;
+  } */
+
 
 @media screen and (max-width: 600px) {
   .topnav .search-container {
@@ -6658,7 +6789,7 @@ nav button {
 ** Trending Item Area Start
 ------------------------------*/
 .trending {
-  padding: 36px 0px 0px;
+  padding: 0px 0px 0px;
   }
 
   .trending .ui-widget.ui-widget-content {
@@ -13560,7 +13691,7 @@ line-height: unset;
     width: 25px;
     height: 25px;
     text-align: center;
-    line-height: 25px;
+    line-height: 6px;
     padding: 0px;
     border-radius: 50%;
     font-size: 18px;
