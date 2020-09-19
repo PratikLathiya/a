@@ -1,0 +1,29 @@
+[01-Aug-2020 16:36:34 UTC] PHP Warning:  Uncaught ErrorException: require(app/Textlocalclass.php): failed to open stream: No such file or directory in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php:297
+Stack trace:
+#0 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(297): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(app/Tex...', '/home/mindian/p...', 297, Array)
+#1 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(297): require()
+#2 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(125): App\Http\Controllers\VendorDataController->sendOTP('919408553799')
+#3 [internal function]: App\Http\Controllers\VendorDataController->poststep2(Object(Illuminate\Http\Request))
+#4 /home/mindian/public_html/allearthy.com/vendormodel/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#5 /home/min in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 297
+[01-Aug-2020 16:36:34 UTC] PHP Fatal error:  App\Http\Controllers\VendorDataController::sendOTP(): Failed opening required 'app/Textlocalclass.php' (include_path='.:/opt/php55/lib/php') in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 297
+[01-Aug-2020 16:37:28 UTC] PHP Warning:  Uncaught ErrorException: require(/app/Textlocalclass.php): failed to open stream: No such file or directory in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php:297
+Stack trace:
+#0 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(297): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/app/Te...', '/home/mindian/p...', 297, Array)
+#1 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(297): require()
+#2 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(125): App\Http\Controllers\VendorDataController->sendOTP('919408553799')
+#3 [internal function]: App\Http\Controllers\VendorDataController->poststep2(Object(Illuminate\Http\Request))
+#4 /home/mindian/public_html/allearthy.com/vendormodel/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#5 /home/mi in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 297
+[01-Aug-2020 16:37:28 UTC] PHP Fatal error:  App\Http\Controllers\VendorDataController::sendOTP(): Failed opening required '/app/Textlocalclass.php' (include_path='.:/opt/php55/lib/php') in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 297
+[01-Aug-2020 16:37:33 UTC] PHP Warning:  Uncaught ErrorException: require(/app/Textlocalclass.php): failed to open stream: No such file or directory in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php:297
+Stack trace:
+#0 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(297): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(/app/Te...', '/home/mindian/p...', 297, Array)
+#1 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(297): require()
+#2 /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php(125): App\Http\Controllers\VendorDataController->sendOTP('919408553799')
+#3 [internal function]: App\Http\Controllers\VendorDataController->poststep2(Object(Illuminate\Http\Request))
+#4 /home/mindian/public_html/allearthy.com/vendormodel/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#5 /home/mi in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 297
+[01-Aug-2020 16:37:33 UTC] PHP Fatal error:  App\Http\Controllers\VendorDataController::sendOTP(): Failed opening required '/app/Textlocalclass.php' (include_path='.:/opt/php55/lib/php') in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 297
+[07-Aug-2020 18:00:02 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 3
+[07-Aug-2020 18:00:12 UTC] PHP Fatal error:  Namespace declaration statement has to be the very first statement or after any declare call in the script in /home/mindian/public_html/allearthy.com/vendormodel/app/Http/Controllers/VendorDataController.php on line 3
