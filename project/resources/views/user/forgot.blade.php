@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="breadcrumb-area">
+{{-- <div class="breadcrumb-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
@@ -21,7 +21,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 
 <section class="login-signup forgot-password">
@@ -29,11 +29,11 @@
         <div class="row justify-content-center">
             <div class="col-lg-5">
                 <div class="login-area">
-                    <div class="header-area forgot-passwor-area">
+                    <div class="header-area forgot-passwor-area" style="font-family: Josefin Sans">
                         <h4 class="title">{{ $langg->lang191 }} </h4>
                         <p class="text">{{ $langg->lang192 }} </p>
                     </div>
-                    <div class="login-form">
+                    <div class="login-form" style="font-family: Josefin Sans">
                         @include('includes.admin.form-login')
                         <form id="forgotform" action="{{route('user-forgot-submit')}}" method="POST">
                             {{ csrf_field() }}

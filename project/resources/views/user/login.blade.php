@@ -7,7 +7,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-6">
         <nav class="comment-log-reg-tabmenu">
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist" style="font-family: Josefin Sans">
             <a class="nav-item nav-link login active" id="nav-log-tab" data-toggle="tab" href="#nav-log" role="tab"
               aria-controls="nav-log" aria-selected="true">
               {{ $langg->lang197 }}
@@ -21,12 +21,12 @@
         <div class="tab-content" id="nav-tabContent">
           <div class="tab-pane fade show active" id="nav-log" role="tabpanel" aria-labelledby="nav-log-tab">
             <div class="login-area">
-              <div class="header-area">
+              <div class="header-area" style="font-family: Josefin Sans">
                 <h4 class="title">{{ $langg->lang172 }}</h4>
               </div>
               <div class="login-form signin-form">
                 @include('includes.admin.form-login')
-                <form class="mloginform" action="{{ route('user.login.submit') }}" method="POST">
+                <form class="mloginform" action="{{ route('user.login.submit') }}" method="POST" style="font-family: Josefin Sans"> 
                   {{ csrf_field() }}
                   <div class="form-input">
                     <input type="email" name="email" placeholder="{{ $langg->lang173 }}" required="">
@@ -80,12 +80,12 @@
           </div>
           <div class="tab-pane fade" id="nav-reg" role="tabpanel" aria-labelledby="nav-reg-tab">
             <div class="login-area signup-area">
-              <div class="header-area">
+              <div class="header-area" style="font-family: Josefin Sans">
                 <h4 class="title">{{ $langg->lang181 }}</h4>
               </div>
               <div class="login-form signup-form">
                 @include('includes.admin.form-login')
-                <form class="mregisterform" action="{{route('user-register-submit')}}" method="POST">
+                <form class="mregisterform" action="{{route('user-register-submit')}}" method="POST" style="font-family: Josefin Sans">
                   {{ csrf_field() }}
 
                   <div class="form-input">

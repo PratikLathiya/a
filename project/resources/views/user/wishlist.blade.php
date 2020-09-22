@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Breadcrumb Area Start -->
-	<div class="breadcrumb-area">
+	{{-- <div class="breadcrumb-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -22,7 +22,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 <!-- Breadcrumb Area End -->
 
 <!-- Wish List Area Start -->
@@ -41,7 +41,7 @@
 
 
 				<div class="col-lg-6">
-					<div class="single-wish">
+					<div class="single-wish" style="font-family: Josefin Sans">
 						<span class="remove wishlist-remove" data-href="{{ route('user-wishlist-remove', App\Models\Wishlist::where('user_id','=',$user->id)->where('product_id','=',$wishlist->id)->first()->id ) }}"><i class="fas fa-times"></i></span>
 						<div class="left">
 							<img src="{{ $wishlist->photo ? asset('assets/images/products/'.$wishlist->photo):asset('assets/images/noimage.png') }}" alt="">

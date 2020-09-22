@@ -189,31 +189,32 @@ class VendorDataController extends Controller
       if(!$request->customer_number ==""){
           // return 0;
           // die();
-
-          $apiKey = urlencode('+s1AuUqM+RQ-nc1FodhjFURZMRqphI8XdgXAyGvbJL');
-          $prefix ='+91';
-          $numbers = $prefix.''.'9427793022';
-          //$numbers = $prefix.''.$request->customer_number;
-          $sender = urlencode('TXTLCL');
-    
-          $otp = mt_rand(10000, 99999);
-          $register = $request->session()->get('register');
-          $register->MobileOtp = $otp;
-          $request->session()->put('MobileOtp', $register);
-          // dd($request->session()->get('register')->MobileOtp);
-          $message = rawurlencode('This is your message OTP:'.$otp.'Testing');
-          $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
-          $ch = curl_init('https://api.textlocal.in/send/');
-          curl_setopt($ch, CURLOPT_POST, true);
-          curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-          curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-          $response = curl_exec($ch);
-          curl_close($ch);
-          $response = json_decode($response);
-          print_r($response);
-          return $response;
-          die();
-         // return redirect()->route('vendor.step3')->withSuccess('Email OTP and Mobile OTP are sent successfully');
+  
+          // Account details
+	$apiKey = urlencode('+s1AuUqM+RQ-nc1FodhjFURZMRqphI8XdgXAyGvbJL');
+	
+	// Message details
+	$prefix ='+91';
+	$numbers = $prefix.''.$request->customer_number;
+	$sender = urlencode('TXTLCL');
+	$message = rawurlencode('I am Pratik');
+ 
+	$numbers = implode(',', $numbers);
+ 
+	// Prepare data for POST request
+	$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+ 
+	// Send the POST request with cURL
+	$ch = curl_init('https://api.textlocal.in/send/');
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$response = curl_exec($ch);
+	curl_close($ch);
+	
+	// Process your response here
+	echo $response;
+        //  return redirect()->route('vendor.step3')->withSuccess('Email OTP and Mobile OTP are sent successfully');
       }
     }
     public function step3(Request $request)

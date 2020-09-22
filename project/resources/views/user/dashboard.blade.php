@@ -11,7 +11,7 @@
           <div class="user-profile-details">
             <div class="account-info">
               <div class="header-area">
-                <h4 class="title">
+                <h4 class="title" style="font-family: Josefin Sans">
                   {{ $langg->lang208 }}
                 </h4>
               </div>

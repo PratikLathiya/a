@@ -9,12 +9,12 @@
         <div class="col-lg-8">
 					<div class="user-profile-details">
 						<div class="order-history">
-							<div class="header-area d-flex align-items-center">
+							<div class="header-area d-flex align-items-center" style="font-family: Josefin Sans">
 								<h4 class="title">{{ $langg->lang252 }}</h4>          
 							</div>
 							<div class="mr-table allproduct message-area  mt-4">
 								@include('includes.form-success')
-									<div class="table-responsiv">
+									<div class="table-responsiv" style="font-family: Josefin Sans">
 											<table id="example" class="table table-hover dt-responsive" cellspacing="0" width="100%">
 												<thead>
 													<tr>

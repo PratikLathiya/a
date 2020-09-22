@@ -1,4 +1,4 @@
-        <div class="col-lg-4">
+        <div class="col-lg-4" style="font-family: Josefin Sans">
           <div class="user-profile-info-area">
             <ul class="links">
                 @php 
@@ -36,11 +36,11 @@
                 </li>
               @endif
 
-              <li class="{{ $link == route('user-orders') ? 'active':'' }}">
+              {{-- <li class="{{ $link == route('user-orders') ? 'active':'' }}">
                 <a href="{{ route('user-orders') }}">
                   {{ $langg->lang201 }}
                 </a>
-              </li>
+              </li> --}}
 
               @if($gs->is_affilate == 1)
 
@@ -55,9 +55,9 @@
               @endif
 
 
-              <li class="{{ $link == route('user-order-track') ? 'active':'' }}">
+              {{-- <li class="{{ $link == route('user-order-track') ? 'active':'' }}">
                   <a href="{{route('user-order-track')}}">{{ $langg->lang772 }}</a>
-              </li>
+              </li> --}}
 
               <li class="{{ $link == route('user-favorites') ? 'active':'' }}">
                   <a href="{{route('user-favorites')}}">{{ $langg->lang231 }}</a>
@@ -96,9 +96,9 @@
             </ul>
           </div>
           @if($gs->reg_vendor == 1)
-            <div class="row mt-4">
+            <div class="row mt-4" >
               <div class="col-lg-12 text-center">
-                <a href="{{ route('user-package') }}" class="mybtn1 lg">
+                <a href="{{ route('user-package') }}" class="mybtn1 lg" style="font-family: Josefin Sans">
                   <i class="fas fa-dollar-sign"></i> {{ Auth::user()->is_vendor == 1 ? $langg->lang233 : (Auth::user()->is_vendor == 0 ? $langg->lang233 : $langg->lang237) }}
                 </a>
               </div>

@@ -7,16 +7,16 @@
         @include('includes.user-dashboard-sidebar')
 <div class="col-lg-8">
                     <div class="user-profile-details">
-                        <div class="account-info">
-                            <div class="header-area">
-                                <h4 class="title">
+                        <div class="account-info" >
+                            <div class="header-area" >
+                                <h4 class="title" style="font-family: Josefin Sans">
                                     {{ $langg->lang262 }}
                                 </h4>
                             </div>
                             <div class="edit-info-area">
 
                                 <div class="body">
-                                    <div class="edit-info-area-form">
+                                    <div class="edit-info-area-form" style="font-family: Josefin Sans">
                                         <div class="gocover"
                                             style="background: url({{ asset('assets/images/'.$gs->loader) }}) no-repeat scroll center center rgba(45, 45, 45, 0.5);">
                                         </div>

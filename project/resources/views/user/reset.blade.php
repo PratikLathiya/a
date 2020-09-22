@@ -5,11 +5,11 @@
     <div class="container">
       <div class="row">
         @include('includes.user-dashboard-sidebar')
-                <div class="col-lg-8">
+                <div class="col-lg-8" >
                     <div class="user-profile-details">
                         <div class="account-info">
                             <div class="header-area">
-                                <h4 class="title">
+                                <h4 class="title" style="font-family: Josefin Sans">
                                     {{ $langg->lang272 }}
                                 </h4>
                             </div>
@@ -18,7 +18,7 @@
                                 <div class="body">
                                         <div class="edit-info-area-form">
                                                 <div class="gocover" style="background: url({{ asset('assets/images/'.$gs->loader) }}) no-repeat scroll center center rgba(45, 45, 45, 0.5);"></div>
-                                                <form id="userform" action="{{route('user-reset-submit')}}" method="POST" enctype="multipart/form-data">
+                                                <form id="userform" action="{{route('user-reset-submit')}}" method="POST" enctype="multipart/form-data" style="font-family: Josefin Sans">
                                                     {{ csrf_field() }}
                                                     @include('includes.admin.form-both') 
                                                     <div class="row">
