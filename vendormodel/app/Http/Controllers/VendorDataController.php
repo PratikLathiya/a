@@ -187,11 +187,13 @@ class VendorDataController extends Controller
       }
 
       if(!$request->customer_number ==""){
+          // return 0;
+          // die();
 
           $apiKey = urlencode('+s1AuUqM+RQ-nc1FodhjFURZMRqphI8XdgXAyGvbJL');
           $prefix ='+91';
-          //$number = $prefix.''.array(9427793022);
-          $numbers = $prefix.''.$request->customer_number;
+          $numbers = $prefix.''.'9427793022';
+          //$numbers = $prefix.''.$request->customer_number;
           $sender = urlencode('TXTLCL');
     
           $otp = mt_rand(10000, 99999);
@@ -208,7 +210,10 @@ class VendorDataController extends Controller
           $response = curl_exec($ch);
           curl_close($ch);
           $response = json_decode($response);
-          return redirect()->route('vendor.step3')->withSuccess('Email OTP and Mobile OTP are sent successfully');
+          print_r($response);
+          return $response;
+          die();
+         // return redirect()->route('vendor.step3')->withSuccess('Email OTP and Mobile OTP are sent successfully');
       }
     }
     public function step3(Request $request)

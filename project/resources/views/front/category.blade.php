@@ -1,7 +1,7 @@
 @extends('layouts.front')
 @section('content')
 <!-- Breadcrumb Area Start -->
-<div class="breadcrumb-area">
+{{-- <div class="breadcrumb-area">
    <div class="container">
       <div class="row">
          <div class="col-lg-12">
@@ -34,10 +34,10 @@
          </div>
       </div>
    </div>
-</div>
+</div> --}}
 <!-- Breadcrumb Area End -->
 <!-- SubCategori Area Start -->
-<section class="sub-categori">
+<section class="sub-categori" style="font-family:josefin Sans">
    <div class="container">
       <div class="row">
          @include('includes.catalog')

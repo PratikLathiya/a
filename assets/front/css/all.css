@@ -5225,6 +5225,33 @@ body {
 
 @media screen and (max-width: 600px)
 {
+  .round #tawkchat-minified-wrapper {
+    bottom: 6px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#navba{
+  font-size: 16px;
+  width: 422px;
+  margin-top:-52px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+.fas {
+  margin-left: -56px;
+}
+.fa-user{
+  margin-left: -133px;
+}
+#store{
+  margin-top:-22px;
+}
+.bottomtotop i{
+  bottom:90px;
+}
+
   .navbar{
     margin-bottom:0px;
   }
@@ -5329,7 +5356,7 @@ body {
 #featured{
   height: 200px;
   width:100px; 
-  margin-left:90px
+  margin-left:90px;
 }
 
   .servihr{
@@ -14781,7 +14808,9 @@ div#myInputautocomplete-list {
   width: 40px;
   height: 40px;
   line-height: 40px;
+  bottom:90px;
 }
+
 .checkout .right-area .footer .right .price {
   font-size: 24px;
 }

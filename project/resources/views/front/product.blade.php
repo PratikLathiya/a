@@ -1,7 +1,7 @@
 @extends('layouts.front')
 
 @section('content')
-
+{{-- 
 <div class="breadcrumb-area">
   <div class="container">
     <div class="row">
@@ -26,7 +26,7 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
 <!-- Product Details Area Start -->
 <section class="product-details-page">
@@ -425,6 +425,7 @@
                                   <div class="left-area">
                                     <img
                                       src="{{ $review->user->photo ? asset('assets/images/users/'.$review->user->photo):asset('assets/images/noimage.png') }}"
+                                      
                                       alt="">
                                     <h5 class="name">{{ $review->user->name }}</h5>
                                     <p class="date">

@@ -7,7 +7,8 @@
 													<li>
 														<div class="single-box">
 															<div class="left-area">
-																<img src="{{ $prod->thumbnail ? asset('assets/images/thumbnails/'.$prod->thumbnail):asset('assets/images/noimage.png') }}" alt="">
+																<img src="{{ $prod->thumbnail ? asset('assets/images/thumbnails/'.$prod->thumbnail):asset('assets/images/noimage.png') }}" alt=""
+																style="width: 60px;	height: 90px;">
 															</div>
 															<div class="right-area">
 																	<div class="stars">

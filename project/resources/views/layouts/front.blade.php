@@ -288,7 +288,7 @@ var modal = document.getElementById("PopModal");
 									<img src="{{asset('assets/images/'.$gs->logo)}}" alt="">
 								</a>
 			  </div>
-			  <div class="col-lg-10 col-sm-12 remove-padding order-last order-sm-2 order-md-2 navbar" style="padding-top: 10px;font-size: 16px">
+			  <div class="col-lg-10 col-sm-12 remove-padding order-last order-sm-2 order-md-2 navbar" style="padding-top: 10px;font-size: 16px" id="navba">
 				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -298,7 +298,7 @@ var modal = document.getElementById("PopModal");
 						<a href="{{route('front.index')}}" class="nav-item nav-link active">HOME</a>
 						<a href="#" class="nav-item nav-link">FEATURE</a>
 						<a href="#" class="nav-item nav-link">SHOP</a>
-						<a href="#" class="nav-item nav-link">ABOUT US</a>
+						<a href="{{ route('front.contact') }}" class="nav-item nav-link">ABOUT US</a>
 						<a href="#" class="nav-item nav-link">WHERE TO BUY?</a>
 						<div class="search-box-wrapper" style="padding-left: 60px">
 							<div class="search-box">
@@ -321,7 +321,7 @@ var modal = document.getElementById("PopModal");
 										<span class="sign-in">Login</span>
 									</div>
 								</a>
-								<a href="javascript:;" data-toggle="modal" style="color: black; padding-left: 20px" data-target="#vendor-login" class="sell-btn"><i class="fas fa-store"></i>Vendor</a>
+								<a href="javascript:;" data-toggle="modal" style="color: black; padding-left: 20px" data-target="#vendor-login" class="sell-btn" id="store"><i class="fas fa-store" ></i>Vendor</a>
 					</div>
 				</div>
 			  </div>

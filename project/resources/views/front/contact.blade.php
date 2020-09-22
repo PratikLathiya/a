@@ -3,7 +3,7 @@
 
 @section('content')
 
-<!-- Breadcrumb Area Start -->
+{{-- <!-- Breadcrumb Area Start -->
 <div class="breadcrumb-area">
     <div class="container">
         <div class="row">
@@ -24,11 +24,11 @@
         </div>
     </div>
 </div>
-<!-- Breadcrumb Area End -->
+<!-- Breadcrumb Area End --> --}}
 
 
     <!-- Contact Us Area Start -->
-    <section class="contact-us">
+    <section class="contact-us" style="font-family: Josefin Sans">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -98,8 +98,8 @@
                             <div class="content d-flex align-self-center">
                                 <div class="content">
                                         @if($ps->site != null && $ps->email != null) 
-                                        <a href="{{$ps->site}}" target="_blank">{{$ps->site}}</a>
-                                        <a href="mailto:{{$ps->email}}">{{$ps->email}}</a>
+                                        <a href="https://allearthy/" target="_blank">https://allearthy/</a>
+                                        <a href="mailto:pratiklathiya39@gmail.com">pratiklathiya39@gmail.com</a>
                                         @elseif($ps->site != null)
                                         <a href="{{$ps->site}}" target="_blank">{{$ps->site}}</a>
                                         @else
@@ -137,12 +137,12 @@
                                     <div class="content d-flex align-self-center">
                                         <div class="content">
                                             @if($ps->phone != null && $ps->fax != null)
-                                            <a href="tel:{{$ps->phone}}">{{$ps->phone}}</a>
-                                            <a href="tel:{{$ps->fax}}">{{$ps->fax}}</a>
+                                            <a href="tel:{{$ps->phone}}">9427793022</a>
+                                            <a href="tel:{{$ps->fax}}">9427793022</a>
                                             @elseif($ps->phone != null)
-                                            <a href="tel:{{$ps->phone}}">{{$ps->phone}}</a>
+                                            <a href="tel:{{$ps->phone}}">9427793022</a>
                                             @else
-                                            <a href="tel:{{$ps->fax}}">{{$ps->fax}}</a>
+                                            <a href="tel:{{$ps->fax}}">9427793022</a>
                                             @endif
                                         </div>
                                     </div>

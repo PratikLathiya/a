@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Breadcrumb Area Start -->
-	<div class="breadcrumb-area">
+	{{-- <div class="breadcrumb-area">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
@@ -17,7 +17,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> --}}
 <!-- Breadcrumb Area End -->
 
 <!-- SubCategori Area Start -->
