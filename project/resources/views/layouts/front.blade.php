@@ -297,7 +297,7 @@ var modal = document.getElementById("PopModal");
 					<div class="navbar-nav">
 						<a href="{{route('front.index')}}" class="nav-item nav-link active">HOME</a>
 						<a href="#" class="nav-item nav-link">FEATURE</a>
-						<a href="#" class="nav-item nav-link">SHOP</a>
+						<a href="{{ route('front.category', [Request::route('category'),Request::route('subcategory'),Request::route('childcategory')]) }}" class="nav-item nav-link">SHOP</a>
 						<a href="{{ route('front.contact') }}" class="nav-item nav-link">ABOUT US</a>
 						<a href="#" class="nav-item nav-link">WHERE TO BUY?</a>
 						<div class="search-box-wrapper" style="padding-left: 60px">

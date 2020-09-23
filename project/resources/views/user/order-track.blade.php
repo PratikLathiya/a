@@ -8,9 +8,9 @@
         @include('includes.user-dashboard-sidebar')
         <div class="col-lg-8">
             <div class="user-profile-details">
-                <div class="order-history">
+                <div class="order-history" >
                     <div class="header-area d-flex align-items-center">
-                        <h4 class="title">{{ $langg->lang772 }}</h4>          
+                        <h4 class="title" style="font-family: Josefin Sans">{{ $langg->lang772 }}</h4>          
                     </div>
                         <div class="order-tracking-content">
                             @include('includes.form-success')

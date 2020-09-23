@@ -10909,7 +10909,8 @@ Faq Page Start
       background: #143250; }
   .user-dashbord .user-profile-details .account-info {
     border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 20px 30px 30px; }
+    padding: 20px 30px 30px; 
+  font-family: "josefin Sans";}
     .user-dashbord .user-profile-details .account-info .header-area {
       border-bottom: 1px solid rgba(0, 0, 0, 0.2);
       padding-bottom: 12px; }
