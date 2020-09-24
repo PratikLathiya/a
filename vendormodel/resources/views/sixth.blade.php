@@ -71,7 +71,7 @@
             <h1>CATEGORY LIST</h1><br><br>
           <form action="{{route('vendor.post.step4')}}" id="registration_form_fourth"  method="POST"  enctype="multipart/form-data">
             @csrf
-            <label class="font-weight-bold"> Select the option</label>
+            {{-- <label class="font-weight-bold"> Select the option</label>
             <div class="urlchoice d-inline-flex pb-3">
               <ul class="selectOption">
                 <li>
@@ -87,7 +87,7 @@
                   <label for="upload" class="rounded-pill">Upload Files</label>
                 </li>
               </ul>
-            </div>
+            </div> --}}
             <div class="div_input instagram d-none">
               <label class="font-weight-bold">Enter Instagram url</label>
               <input type="text" id="instagram_url" name="instagram_url" value="{{ session()->get('register.instagram_url') }}"  class="cust_name w-100 mb-5" style=""><br>

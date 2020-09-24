@@ -189,32 +189,58 @@ class VendorDataController extends Controller
       if(!$request->customer_number ==""){
           // return 0;
           // die();
-  
-          // Account details
-	$apiKey = urlencode('+s1AuUqM+RQ-nc1FodhjFURZMRqphI8XdgXAyGvbJL');
-	
-	// Message details
-	$prefix ='+91';
-	$numbers = $prefix.''.$request->customer_number;
-	$sender = urlencode('TXTLCL');
-	$message = rawurlencode('I am Pratik');
- 
-	$numbers = implode(',', $numbers);
- 
-	// Prepare data for POST request
-	$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
- 
-	// Send the POST request with cURL
-	$ch = curl_init('https://api.textlocal.in/send/');
+  // Authorisation details.
+	$username = "plathiya637@rku.ac.in";
+	$hash = "efc2b3a1de4792c303cff20e9ae6df8d6a5c029d773bcc9cb5970d9b89d63ba9";
+
+	// Config variables. Consult http://api.textlocal.in/docs for more info.
+	$test = "0";
+
+	// Data for text message. This is the text message data.
+	$sender = "TXTLCL"; // This is who the message appears to be from.
+  $numbers = "919427793022"; // A single number or a comma-seperated list of numbers
+  $otp = mt_rand(10000, 99999);
+	$message = ('This is your message OTP:'.$otp.' -Testing');
+	// 612 chars or less
+	// A single number or a comma-seperated list of numbers
+	$message = urlencode($message);
+	$data = "username=".$username."&hash=".$hash."&message=".$message."&sender=".$sender."&numbers=".$numbers."&test=".$test;
+	$ch = curl_init('http://api.textlocal.in/send/?');
 	curl_setopt($ch, CURLOPT_POST, true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	$response = curl_exec($ch);
-	curl_close($ch);
+	$result = curl_exec($ch); // This is the result from the API
+  curl_close($ch);
+
+  
+  //$result = json_decode($result);
+ // echo $result;
+//           // Account details
+// 	$apiKey = urlencode('+s1AuUqM+RQ-nc1FodhjFURZMRqphI8XdgXAyGvbJL');
 	
-	// Process your response here
-	echo $response;
-        //  return redirect()->route('vendor.step3')->withSuccess('Email OTP and Mobile OTP are sent successfully');
+// 	// Message details
+// 	$prefix ='+91';
+// 	$numbers = $prefix.''.$request->customer_number;
+// 	$sender = urlencode('TXTLCL');
+// 	$message = rawurlencode('I am Pratik');
+ 
+// 	//$numbers = implode(',', $numbers);
+ 
+// 	// Prepare data for POST request
+// 	$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+ 
+// 	// Send the POST request with cURL
+// 	$ch = curl_init('https://api.textlocal.in/send/');
+// 	curl_setopt($ch, CURLOPT_POST, true);
+// 	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+// 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// 	$response = curl_exec($ch);
+// 	curl_close($ch);
+	
+//   // Process your response here
+  
+// //	echo $response;
+       return redirect()->route('vendor.step3')->withSuccess('Email OTP and Mobile OTP are sent successfully');
       }
     }
     public function step3(Request $request)
@@ -267,9 +293,9 @@ class VendorDataController extends Controller
           }
       } 
     
-      if($request->mobile_otp != $request->session()->get('register')->MobileOtp){
-        return redirect()->back()->with('error', 'Mobile Otp is invalid. Please Enter valid OTP');
-      }
+      // if($request->mobile_otp != $request->session()->get('register')->MobileOtp){
+      //   return redirect()->back()->with('error', 'Mobile Otp is invalid. Please Enter valid OTP');
+      // }
       
       return redirect()->route('vendor.step4');
     }
@@ -294,23 +320,23 @@ class VendorDataController extends Controller
       if(empty($request->session()->get('register'))){
           $register = new  VendorData();
           $register->product_address = $request->product_address;
-          if(isset($request->instagram_url)){
-            $register->instagram_url = $request->instagram_url;
-          }
-          if(isset($request->website_url)){
-            $register->website_url = $request->website_url;
-          }
-          /** upload pics */
-          if($images = $request->file('upload_pics')){
+        //   if(isset($request->instagram_url)){
+        //     $register->instagram_url = $request->instagram_url;
+        //   }
+        //   if(isset($request->website_url)){
+        //     $register->website_url = $request->website_url;
+        //   }
+        //   /** upload pics */
+        //   if($images = $request->file('upload_pics')){
             
-            foreach($images as $file){
-              $name= time().'.'.$file->getClientOriginalName();
-              $file->move(public_path().'/uploads',$name);
-              $data[] = $name; 
-            }
-         $register->product_image = implode(',',$data) ;
+        //     foreach($images as $file){
+        //       $name= time().'.'.$file->getClientOriginalName();
+        //       $file->move(public_path().'/uploads',$name);
+        //       $data[] = $name; 
+        //     }
+        //  $register->product_image = implode(',',$data) ;
 
-         }
+        //  }
             /** end upload pics */
           $array =  implode(',',$request->cat);
           $register->product_category = $array ;
@@ -320,23 +346,23 @@ class VendorDataController extends Controller
           $register->product_address = $request->product_address;
 
           /**addtional fields */
-          if(isset($request->instagram_url)){
-            $register->instagram_url = $request->instagram_url;
-          }
-          if(isset($request->website_url)){
-            $register->website_url = $request->website_url;
-          }
-          /** upload pics */
-          if($images = $request->file('upload_pics')){
+        //   if(isset($request->instagram_url)){
+        //     $register->instagram_url = $request->instagram_url;
+        //   }
+        //   if(isset($request->website_url)){
+        //     $register->website_url = $request->website_url;
+        //   }
+        //   /** upload pics */
+        //   if($images = $request->file('upload_pics')){
             
-            foreach($images as $file){
-              $name= time().'.'.$file->getClientOriginalName();
-              $file->move(public_path().'/uploads',$name);
-              $data[] = $name; 
-            }
-         $register->product_image = implode(',',$data) ;
+        //     foreach($images as $file){
+        //       $name= time().'.'.$file->getClientOriginalName();
+        //       $file->move(public_path().'/uploads',$name);
+        //       $data[] = $name; 
+        //     }
+        //  $register->product_image = implode(',',$data) ;
 
-         }
+        //  }
             /** end upload pics */
          /**end additional fields */
           $array =  implode(',',$request->cat);
