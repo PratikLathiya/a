@@ -200,6 +200,9 @@ class VendorDataController extends Controller
 	$sender = "TXTLCL"; // This is who the message appears to be from.
   $numbers = "919427793022"; // A single number or a comma-seperated list of numbers
   $otp = mt_rand(10000, 99999);
+  $register = $request->session()->get('register');
+	$register->MobileOtp = $otp;
+	$request->session()->put('MobileOtp', $register);
 	$message = ('This is your message OTP:'.$otp.' -Testing');
 	// 612 chars or less
 	// A single number or a comma-seperated list of numbers

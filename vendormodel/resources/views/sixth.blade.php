@@ -87,7 +87,7 @@
                   <label for="upload" class="rounded-pill">Upload Files</label>
                 </li>
               </ul>
-            </div> --}}
+            </div>
             <div class="div_input instagram d-none">
               <label class="font-weight-bold">Enter Instagram url</label>
               <input type="text" id="instagram_url" name="instagram_url" value="{{ session()->get('register.instagram_url') }}"  class="cust_name w-100 mb-5" style=""><br>
@@ -99,7 +99,7 @@
             <div class="div_input upload d-none">
               <label class="font-weight-bold">Upload Pics</label>
               <input type="file" id="upload_pics" name="upload_pics[]" multiple accept="image/*"  class="cust_name w-100 mb-5" style="" ><br>
-            </div>
+            </div> --}}
                 <b>Products Category</b><br>
                   <div class="dropdown" multiple="multiple">
                     <button class="btn btn-default dropdown-btn dropdown-toggle w-100" type="button" id="dropdownMenu1" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="true" style="width: 65%; border: 1px solid white;box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);">
