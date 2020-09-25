@@ -165,6 +165,32 @@ var modal = document.getElementById("PopModal");
         
         }
 	</script>
+	<script>
+		jQuery(document).ready(function (e) {
+		  function t(t) {
+			  e(t).bind("click", function (t) {
+				  t.preventDefault();
+				  e(this).parent().fadeOut()
+			  })
+		  }
+		  e(".dropdown-toggle").click(function () {
+			  var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
+			  e(".button-dropdown .dropdown-menu").hide();
+			  e(".button-dropdown .dropdown-toggle").removeClass("active");
+			  if (t) {
+				  e(this).parents(".button-dropdown").children(".dropdown-menu").toggle().parents(".button-dropdown").children(".dropdown-toggle").addClass("active")
+			  }
+		  });
+		  e(document).bind("click", function (t) {
+			  var n = e(t.target);
+			  if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-menu").hide();
+		  });
+		  e(document).bind("click", function (t) {
+			  var n = e(t.target);
+			  if (!n.parents().hasClass("button-dropdown")) e(".button-dropdown .dropdown-toggle").removeClass("active");
+		  })
+	  });
+	  </script>
 </head>
 
 <body>
@@ -313,16 +339,43 @@ var modal = document.getElementById("PopModal");
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="navbar-nav ml-auto" style="padding-left: 125px;padding-top: 10px">
+						@if (Auth::guest())
+
 						<a href="{{ route('user.login') }}" class="sign-log" style="color: black">
-									<div class="links">
-										<i class="fa fa-user" aria-hidden="true"></i>
-										<span class="sign-in">Login</span>
-									</div>
-								</a>
-								<a href="javascript:;" data-toggle="modal" style="color: black; padding-left: 20px" data-target="#vendor-login" class="sell-btn" id="store"><i class="fas fa-store" ></i>Vendor</a>
+							<div class="links">
+								<i class="fa fa-user" aria-hidden="true"></i>
+								<span class="sign-in">Login</span>
+							</div>
+						</a>
+						<a href="javascript:;" data-toggle="modal" style="color: black; padding-left: 20px" data-target="#vendor-login" class="sell-btn" id="store"><i class="fas fa-store" ></i>Vendor</a>
+												
+				    @else 
+					{{-- {{ Auth::email()->name }} --}}
+					<li class="button-dropdown">
+						<a href="javascript:void(0)" class="dropdown-toggle">
+						  My Account<span></span>
+						</a>
+						<ul class="dropdown-menu" style="margin-left:75%">
+						  <h5>{{ $langg->lang431 }}</h5>
+						  <li>
+							<a href="{{ route('user-dashboard') }}"><i class="fas fa-sign-in-alt"></i> {{ $langg->lang433 }}</a>
+						  </li>
+		  
+						  <li>
+							<a href="{{ route('user-profile') }}"><i class="fas fa-user"></i> {{ $langg->lang434 }}</a>
+						  </li>
+						  <li>
+							<a href="{{ route('user-logout') }}"><i class="fas fa-power-off"></i> {{ $langg->lang435 }}</a>
+						  </li>
+						</ul>
+					  </li>
+					
+				   	@endif
+						
 					</div>
+
 				</div>
 			  </div>
 			{{-- </div> --}}
