@@ -21,7 +21,7 @@
 
 
 {{-- Info Area Start --}}
-<section class="info-area">
+{{-- <section class="info-area">
   <div class="container">
 
 
@@ -59,7 +59,7 @@
 
 
         </div>
-</section>
+</section> --}}
 {{-- Info Area End  --}}
 
 
