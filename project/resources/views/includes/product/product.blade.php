@@ -1,5 +1,5 @@
 
-									<div class="col-lg-4 col-md-4 col-6 remove-padding">
+									<div class="col-lg-4 col-md-4 col-6 remove-padding" style="font-family: Josefin Sans">
 
 
 										<a href="{{ route('front.product', $prod->slug) }}" class="item">
