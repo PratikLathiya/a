@@ -112,7 +112,7 @@ h1{
 		<h1>WE HAVE RECEIVED YOUR REQUEST.</h1>
 		<h1>WE SHALL</h1>
 		<h1>GET BACK TO YOU SOON</h1><br><br>
-		<a href="home" style="color: white;"><button class="btn btn-success"  onclick="closeForm()">Home</button></a>
+	<a href="http://localhost/allearthy/" style="color: white;"><button class="btn btn-success"  onclick="closeForm()">Home</button></a>
 
 	</div>
 

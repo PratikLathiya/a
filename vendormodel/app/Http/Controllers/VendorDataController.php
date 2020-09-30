@@ -198,7 +198,8 @@ class VendorDataController extends Controller
 
 	// Data for text message. This is the text message data.
 	$sender = "TXTLCL"; // This is who the message appears to be from.
-  $numbers = "919427793022"; // A single number or a comma-seperated list of numbers
+  
+  $numbers = $request->customer_number;//$numbers = "919427793022"; // A single number or a comma-seperated list of numbers
   $otp = mt_rand(10000, 99999);
   $register = $request->session()->get('register');
 	$register->MobileOtp = $otp;
